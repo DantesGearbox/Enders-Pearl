@@ -1,0 +1,41 @@
+TODO:
+- Make tiles into one big block to not get stuck
+
+DONE:
+- Fix the edge-jumping bug, steal from Level 1 game
+- Only scale the visual of the sprite with velocity, not the collision box
+
+Design decisions:
+- Pearl is affected by gravity (consider size of design space, maybe combine)
+- Have collectibles, either Mario style coins that you pick up all the time (casual), or Celeste strawberries (challenging)
+- Pressing the throw button as soon as a pearl lands might provide some added feature to have more depth
+- Releasing the throw button or pressing the throw button again, mid-air, might teleport you to the pearls current position
+- Holding down the button before a throw might charge up the throw or have some bonus
+- The pearl might have a specific range after which it starts being affected by gravity, but is unaffected before this range
+- Throwing the pearl might propell you backwards
+- Holding down the other mouse button might modify the throw
+- There might be a whole different mechanic on the other mouse button
+- Having time sensitive pick-ups might encourage the player to play faster for a short time
+- Have a pearl that summons platforms
+- Boomerang pearls, affected by gravity, but when you press the button again it starts flying directly towards the player
+- Inspired by Angry Birds: Press again to make the pearl drop straight down, press again to straighten the curve
+
+Design decisions
+- A new pearl can only be thrown when the previous one is destroyed
+- Jumping is mostly for vertical movement due to it's sharp and tall curve
+
+Level Design pillars:
+- The rule of 3
+- Remember the arc
+
+Rambling:
+- Identify pillars of gameplay and switch through them for good pacing (Vetical jump, horizontal jump, pearl jump, other mechanics)
+- Include mystique in levels by showing the door before the key, show a branch while it is still unavailable
+- Flow is the product of fitting the right player skill to the right game difficulty curve
+- Try to have depth within a mechanic, ex Darius/Aatrox deals more damage with the edge of their attacks
+- A mechanic should fullfil a niche a not overlap too much, like weapons in a shooter
+- The more mechanics there are, the smaller their niches will be, so much that new players won't notice the difference
+- A challenge that can be solved easily can work well as a reward
+- Having multiple ways through a level can allow for a kind of OR gating mechanic
+
+
