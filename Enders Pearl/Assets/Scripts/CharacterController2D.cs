@@ -40,6 +40,9 @@ public class CharacterController2D : MonoBehaviour {
 	//Collision variables
 	public bool onGround = false;
 
+	//Other variables
+	private bool playerIsPaused = false;
+
 	// Use this for initialization
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
@@ -60,7 +63,7 @@ public class CharacterController2D : MonoBehaviour {
 			//If the angle between the normal and up is less than 5, we are on the ground
 			if (Vector2.Angle(contacts[i].normal, Vector2.up) < 5.0f) {
 				onGround = true;
-				rb.velocity = new Vector2(0, 0);
+				rb.velocity = new Vector2(rb.velocity.x, 0);
 			}
 		}
 	}
@@ -74,12 +77,24 @@ public class CharacterController2D : MonoBehaviour {
 		CheckGroundCollision();
 	}
 
+	public void PauseThePlayer(){
+		playerIsPaused = true;
+		rb.Sleep();
+	}
+
+	public void UnpauseThePlayer() {
+		playerIsPaused = false;
+		rb.WakeUp();
+	}
+
 	// Update is called once per frame
 	void Update() {
 
-		Jumping();
-		Gravity();
-		HorizontalMovement();
+		if(!playerIsPaused){
+			Jumping();
+			Gravity();
+			HorizontalMovement();
+		}
 
 	}
 
